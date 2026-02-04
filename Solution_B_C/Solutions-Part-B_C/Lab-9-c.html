@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab-9-c C</title>
+    <style>
+        /* Child Selector */
+        ul > li {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* Adjacent Sibling Selector */
+        h2 + p {
+            color: red;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid green;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Child Selector Example</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <h2>Adjacent Sibling Selector Example</h2>
+    <p>This paragraph is immediately after h2.</p>
+    <p>This paragraph is not affected.</p>
+
+    <h2>Attribute Selector Example</h2>
+    <input type="text" placeholder="Text input">
+    <input type="password" placeholder="Password input">
+
+</body>
+</html>
+
+<!-- Inline style > ID > Class > Element --> <!--Order of priority-->
