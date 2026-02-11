@@ -1,0 +1,87 @@
+.main{
+    height: 100vh;
+}
+.nav{
+    height: 20%;
+}
+.photo{
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+.logo{
+    height: 100%;
+    width: 30%;
+    float: right;
+    word-spacing: 15px;
+    color: blue;
+}
+.logo a{
+    text-decoration: none;
+}
+.hello{
+    height: 50%;
+    background-image: url(./bc.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+.boxes{ 
+    height: 30%;
+}
+.textless{
+    height: 100%;
+    width: 55%;
+    /*background-color: blue;*/
+    float: left;
+}
+.text{
+ /*background-color: blueviolet;*/
+ float: right;
+ height: 100%;
+ width: 45%;
+}
+
+.box1{
+       border: 2px;
+       width: 40vh;
+       height: 20vh;
+          border-color: rgb(244, 26, 26);
+       margin-left: 7vh;
+       margin-top: 5vh;
+       float: left;
+       text-align: center;
+       border-style: solid;
+}
+.box2{
+    border: 2px;
+    width: 40vh;
+    height: 20vh;
+    border-color: rgb(244, 26, 26);    
+    margin-left: 7vh;
+    margin-top: 5vh;
+    float: left;
+    text-align: center;
+    border-style: solid;
+}
+.box3{
+    border: 2px;
+    width: 40vh;
+    height: 20vh;
+    border-color: rgb(244, 26, 26);    
+    margin-left: 7vh;
+    margin-top: 5vh;
+    float: left;
+    text-align: center;
+    border-style: solid;
+}
+.box4{
+    border: 2px;
+    width: 40vh;
+    height: 20vh;
+    border-color: rgb(244, 26, 26);    
+    margin-left: 7vh;
+    margin-top: 5vh;
+    float: left;
+    text-align: center;
+    border-style: solid;
+}
