@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* ================================
+   KEYFRAMES (animation-name)
+   Possible values:
+   - custom name (e.g., slide, fade)
+   - none
+================================ */
+      @keyframes demoAnimation {
+        0% {
+          transform: translateX(0);
+          background-color: red;
+        }
+
+        50% {
+          transform: translateX(150px);
+          background-color: orange;
+        }
+
+        100% {
+          transform: translateX(0);
+          background-color: green;
+        }
+      }
+
+      /* ================================
+   ANIMATION PROPERTIES
+================================ */
+
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 40px;
+        background-color: royalblue;
+
+        /* animation-name */
+        /* Possible: none | keyframe-name */
+        animation-name: demoAnimation;
+
+        /* animation-duration */
+        /* Possible: 0s | 1s | 2s | 500ms etc */
+        animation-duration: 4s;
+
+        /* animation-timing-function */
+        /* Possible:
+     ease (default)
+     linear
+     ease-in
+     ease-out
+     ease-in-out
+     cubic-bezier(n,n,n,n)
+     steps(n, start/end)
+  */
+        animation-timing-function: ease-in-out;
+
+        /* animation-delay */
+        /* Possible: 0s | 2s | 500ms etc */
+        animation-delay: 3s;
+
+        /* animation-iteration-count */
+        /* Possible:
+     1 (default)
+     number (2,3,4...)
+     infinite
+  */
+        animation-iteration-count: 1;
+
+        /* animation-direction */
+        /* Possible:
+     normal (default)
+     reverse
+     alternate
+     alternate-reverse
+  */
+        animation-direction: alternate;
+
+        /* animation-fill-mode */
+        /* Possible:
+     none (default)
+     forwards
+     backwards
+     both
+  */
+        animation-fill-mode: both;
+
+        /* animation-play-state */
+        /* Possible:
+     running (default)
+     paused
+  */
+        animation-play-state: running;
+      }
+
+      /* Button to pause/play animation */
+      button {
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Complete CSS Animation Demo</h2>
+
+    <div class="box"></div>
+
+  </body>
+</html>
