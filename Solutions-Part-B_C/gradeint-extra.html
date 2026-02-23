@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Complete CSS Gradient Demo</title>
+
+        <style>
+                body {
+                        font-family: Arial, sans-serif;
+                        background: #111;
+                        color: white;
+                        margin: 0;
+                        padding: 20px;
+                } 
+                             
+
+                h2 {
+                        margin-top: 40px;
+                        border-bottom: 1px solid #444;
+                        padding-bottom: 5px;
+                }
+
+                .box {
+                        width: 220px;
+                        height: 120px;
+                        margin: 15px;
+                        display: inline-block;
+                        border-radius: 12px;
+                        text-align: center;
+                        line-height: 120px;
+                        font-weight: bold;
+                }
+
+                /* =========================
+   LINEAR GRADIENTS
+========================= */
+
+                /* Direction */
+                .linear-top {
+                        background: linear-gradient(to top, red, blue);
+                }
+
+                .linear-right {
+                        background: linear-gradient(to right, red, blue);
+                }
+
+                .linear-angle {
+                        background: linear-gradient(45deg, red, yellow, green);
+                }
+
+                /* Multiple stops */
+                .linear-stops {
+                        background: linear-gradient(to right,
+                                        red 0%, 
+                                        yellow 25%,
+                                        green 50%,
+                                        blue 75%,
+                                        purple 100%);
+                }
+
+                /* Transparency */
+                .linear-alpha {
+                        background: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 1));
+                }
+
+                /* Repeating */
+                .linear-repeat {
+                        background: repeating-linear-gradient(45deg,
+                                        red 0px,
+                                        red 10px,
+                                        yellow 10px,
+                                        yellow 20px);
+                }
+
+                /* =========================
+   RADIAL GRADIENTS
+========================= */
+
+                /* Basic circle */
+                .radial-basic {
+                        background: radial-gradient(circle, red, blue);
+                }
+
+                /* Ellipse */
+                .radial-ellipse {
+                        background: radial-gradient(ellipse, red, yellow, green);
+                }
+
+                /* Closest-side */
+                .radial-closest {
+                        background: radial-gradient(circle closest-side, red, blue);
+                }
+
+                /* Farthest-corner */
+                .radial-farthest {
+                        background: radial-gradient(circle farthest-corner, red, blue);
+                }
+
+                /* Position */
+                .radial-position {
+                        background: radial-gradient(circle at top right, red, blue);
+                }
+
+                /* Repeating radial */
+                .radial-repeat {
+                        background: repeating-radial-gradient(circle,
+                                        red 0px,
+                                        red 10px,
+                                        yellow 10px,
+                                        yellow 20px);
+                }
+
+                /* =========================
+   CONIC GRADIENT
+========================= */
+
+                .conic-basic {
+                        background: conic-gradient(red, yellow, green, blue, red);
+                }
+
+                .conic-angle {
+                        background: conic-gradient(from 90deg, red, yellow, green);
+                }
+
+                /* =========================
+   MULTIPLE BACKGROUNDS
+========================= */
+
+                .multi-bg {
+                        background:
+                                linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                                url("https://picsum.photos/300");
+                        background-size: cover;
+                }
+
+                /* =========================
+   GRADIENT TEXT
+========================= */
+
+                .gradient-text {
+                        font-size: 40px;
+                        font-weight: bold;
+                        background: linear-gradient(to right, red, yellow);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                }
+
+                /* =========================
+   GRADIENT BORDER
+========================= */
+
+                .gradient-border {
+                        border: 5px solid;
+                        border-image: linear-gradient(to right, red, yellow) 1;
+                }
+
+                /* =========================
+   BACKGROUND SIZE / POSITION
+========================= */
+
+                .bg-size {
+                        background: linear-gradient(45deg, red, yellow, green);
+                        background-size: 50% 50%;
+                }
+
+                .bg-position {
+                        background: linear-gradient(45deg, red, yellow, green);
+                        background-size: 200% 200%;
+                        background-position: right bottom;
+                }
+
+                /* =========================
+   ANIMATED GRADIENT
+========================= */
+
+                @keyframes moveGradient {
+                        0% {
+                                background-position: left;
+                        }
+
+                        100% {
+                                background-position: right;
+                        }
+                }
+
+                .animated {
+                        background: linear-gradient(90deg, red, yellow, green, blue);
+                        background-size: 400%;
+                        animation: moveGradient 5s infinite alternate;
+                }
+        </style>
+</head>
+
+<body>
+
+        <h1>🎨 Complete CSS Gradient Showcase</h1>
+
+        <h2>Linear Gradients</h2>
+        <div class="box linear-top">Top</div>
+        <div class="box linear-right">Right</div>
+        <div class="box linear-angle">Angle</div>
+        <div class="box linear-stops">Stops</div>
+        <div class="box linear-alpha">Alpha</div>
+        <div class="box linear-repeat">Repeat</div>
+
+        <h2>Radial Gradients</h2>
+        <div class="box radial-basic">Basic</div>
+        <div class="box radial-ellipse">Ellipse</div>
+        <div class="box radial-closest">Closest</div>
+        <div class="box radial-farthest">Farthest</div>
+        <div class="box radial-position">Position</div>
+        <div class="box radial-repeat">Repeat</div>
+
+        <h2>Conic Gradients</h2>
+        <div class="box conic-basic">Basic</div>
+        <div class="box conic-angle">Angle</div>
+
+        <h2>Multiple Background</h2>
+        <div class="box multi-bg">Overlay</div>
+
+        <h2>Gradient Text</h2>
+        <div class="gradient-text">Gradient Text Effect</div>
+
+        <h2>Gradient Border</h2>
+        <div class="box gradient-border">Border</div>
+
+        <h2>Background Size / Position</h2>
+        <div class="box bg-size">Size</div>
+        <div class="box bg-position">Position</div>
+
+        <h2>Animated Gradient</h2>
+        <div class="box animated">Animated</div>
+
+</body>
+
+</html>

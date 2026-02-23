@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Pseudo Classes and Elements Demo</title>
+
+    <style>
+      /* =====================================
+   ROOT PSEUDO-CLASS
+===================================== */
+      :root {
+        --main-color: #0077cc;
+        --danger-color: red;
+      }
+
+      /* =====================================
+   GENERAL ELEMENT SELECTORS
+===================================== */
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        background: var(--main-color);
+        color: white;
+        padding: 15px;
+      }
+
+      /* =====================================
+   CLASS SELECTOR WITH HOVER
+===================================== */
+      .card {
+        background: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      /* :hover */
+      .card:hover {
+        background: #e6f2ff;
+        transform: scale(1.03);
+      }
+
+      /* =====================================
+   LINK PSEUDO CLASSES
+===================================== */
+      a:link {
+        color: blue;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      a:active {
+        color: green;
+      }
+
+      /* =====================================
+   LIST PSEUDO CLASSES
+===================================== */
+      li:first-child {
+        color: red;
+      }
+
+      li:last-child {
+        color: green;
+      }
+
+      li:nth-child(2) {
+        font-weight: bold;
+      }
+
+      li:nth-of-type(3) {
+        text-decoration: underline;
+      }
+
+      /* ::marker */
+      li::marker {
+        color: var(--main-color);
+      }
+
+      /* =====================================
+   FORM STATES
+===================================== */
+
+      /* Focus */
+      input:focus {
+        border: 2px solid var(--main-color);
+        outline: none;
+      }
+
+      /* Focus within */
+      form:focus-within {
+        background: #eef7ff;
+      }
+
+      /* Required & Optional */
+      input:required {
+        background: #fff3cd;
+      }
+
+      input:optional {
+        background: #e2ffe2;
+      }
+
+      /* Valid & Invalid */
+      input:valid {
+        border: 2px solid green;
+      }
+
+      input:invalid {
+        border: 2px solid var(--danger-color);
+      }
+
+      /* Enabled & Disabled */
+      input:enabled {
+        background-color: #ffffff;
+      }
+
+      input:disabled {
+        background-color: #ddd;
+      }
+
+      /* Checked */
+      input:checked {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* In-range & Out-of-range */
+      input:in-range {
+        background: #e0ffe0;
+      }
+
+      input:out-of-range {
+        background: #ffe0e0;
+      }
+
+      /* Read-only & Read-write */
+      input:read-only {
+        background: #f0f0f0;
+      }
+
+      input:read-write {
+        background: #ffffff;
+      }
+
+      /* =====================================
+   EMPTY PSEUDO CLASS
+===================================== */
+      .empty-box:empty {
+        height: 30px;
+        background: red;
+      }
+
+      /* =====================================
+   TARGET PSEUDO CLASS
+===================================== */
+      #section1:target {
+        background: yellow;
+      }
+
+      /* =====================================
+   NOT PSEUDO CLASS
+===================================== */
+      p:not(.special) {
+        color: gray;
+      }
+
+      /* =====================================
+   PSEUDO ELEMENTS
+===================================== */
+
+      /* Before */
+      .before::before {
+        content: "★ ";
+        color: orange;
+      }
+
+      /* After */
+      .after::after {
+        content: " ✔";
+        color: green;
+      }
+
+      /* First Letter */
+      .first-letter::first-letter {
+        font-size: 30px;
+        color: red;
+      }
+
+      /* First Line */
+      .first-line::first-line {
+        font-weight: bold;
+        color: blue;
+      }
+
+      /* Selection */
+      ::selection {
+        background: black;
+        color: yellow;
+      }
+
+      /* Placeholder */
+      ::placeholder {
+        color: gray;
+        font-style: italic;
+      }
+
+      /* =====================================
+   BUTTON EFFECTS
+===================================== */
+      button {
+        padding: 8px 12px;
+        background: var(--main-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #005fa3;
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Complete Pseudo-Class & Pseudo-Element Demo</h1>
+
+    <div class="card">
+      <h2>Links</h2>
+      <a href="#">Click This Link</a>
+    </div>
+
+    <div class="card">
+      <h2>List Example</h2>
+      <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Form Example</h2>
+      <form>
+        Name (Required):<br />
+        <input type="text" required placeholder="Enter name" /><br /><br />
+
+        Email (Validation):<br />
+        <input type="email" placeholder="Enter valid email" /><br /><br />
+
+        Age (Range 18-60):<br />
+        <input type="number" min="18" max="60" /><br /><br />
+
+        Readonly Field:<br />
+        <input type="text" value="Readonly Text" readonly /><br /><br />
+
+        Disabled Field:<br />
+        <input type="text" value="Disabled" disabled /><br /><br />
+
+        Accept Terms:
+        <input type="checkbox" /><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Pseudo Elements</h2>
+      <p class="before">Before example</p>
+      <p class="after">After example</p>
+      <p class="first-letter">First letter example text.</p>
+      <p class="first-line">
+        First line example text. Resize window to see effect properly.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>:not() Example</h2>
+      <p>This paragraph is gray.</p>
+      <p class="special">This paragraph is NOT gray.</p>
+    </div>
+
+    <div class="card">
+      <h2>:target Example</h2>
+      <a href="#section1">Go to Target Section</a>
+      <div id="section1">This section changes color when targeted.</div>
+    </div>
+
+    <div class="card">
+      <h2>:empty Example</h2>
+      <div class="empty-box"></div>
+      <p>
+        if this div is empty, it will have a red background and height of 30px ,
+        if you add any content inside it, the red background and height will
+        disappear
+      </p>
+    </div>
+  </body>
+</html>
