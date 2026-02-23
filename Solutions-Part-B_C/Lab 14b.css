@@ -1,0 +1,137 @@
+.main{
+    height: 100vh;
+}
+.palate{
+    height: 100%;
+    background-color: rgb(6, 6, 102);
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.bbox{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    margin: 20px;
+    margin-left: 55px;
+}
+.boxe1{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top left,rgb(252, 157, 213),rgb(101, 206, 206),rgb(144, 244, 144));
+    border-radius: 10px;
+}
+.boxe2{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top,rgb(147, 193, 238),rgb(102, 155, 245),rgb(103, 63, 246));
+    border-radius: 10px;
+
+
+}
+.boxe3{
+    height: 100%;
+    width: 38%;
+    background-image: linear-gradient(to top left,rgb(72, 34, 208),rgb(209, 76, 176),rgb(238, 180, 110));
+    border-radius: 10px;
+
+
+}
+.boxe4{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top left,rgb(244, 133, 164),rgb(251, 50, 160),rgb(251, 174, 235));
+    border-radius: 10px;
+
+
+}
+.boxe5{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top left,rgb(247, 181, 219),rgb(224, 245, 245),rgb(96, 191, 246));
+    border-radius: 10px;
+
+
+}
+.boxe6{
+    height: 100%;
+    width: 38%;
+    background-image: linear-gradient(to top right,rgb(248, 171, 29),rgb(244, 36, 36),rgb(216, 76, 170));    
+    border-radius: 10px;
+
+}
+.boxe7{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top left,rgb(64, 153, 183),rgb(113, 46, 202),rgb(205, 27, 205));
+    border-radius: 10px;
+
+}
+.boxe8{
+    height: 100%;
+    width: 38%;
+    background-image: linear-gradient(to top left,rgb(240, 236, 168),rgb(241, 230, 110),rgb(243, 199, 7));
+    margin-right: 9px;
+    border-radius: 10px;
+
+}
+.boxe9{
+    height: 100%;
+    width: 38%;
+    background-image: linear-gradient(to top left, rgb(241, 136, 173),rgb(248, 89, 116),rgb(246, 166, 213));    
+    border-radius: 10px;
+
+}
+.boxe10{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top left,rgb(185, 244, 244),rgb(169, 246, 246),rgb(244, 244, 158));
+    border-radius: 10px;
+
+}
+.boxe11{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to left,rgb(199, 241, 241),rgb(249, 190, 199),rgb(253, 253, 226));
+    border-radius: 10px;
+
+}
+.boxe12{
+    height: 100%;
+    width: 38%;
+    background-image: linear-gradient(to top,rgb(240, 228, 49),rgb(245, 46, 46),rgb(246, 127, 194));    
+    border-radius: 10px;
+
+}
+.boxe13{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top right,rgb(238, 248, 247),rgb(193, 249, 249),rgb(68, 192, 233));
+    border-radius: 10px;
+
+}
+.boxe14{
+    height: 100%;
+    width: 38%;
+    margin-right: 9px;
+    background-image: linear-gradient(to top right,rgb(242, 170, 181),rgb(196, 33, 196),rgb(10, 86, 124)20vh);
+    border-radius: 10px;    
+
+}
+.boxe15{
+    height: 100%;
+    width: 38%;
+    background-image: linear-gradient(to top right,rgb(95, 237, 95),rgb(43, 174, 218),rgb(38, 38, 225));
+    border-radius: 10px;
+
+}
+

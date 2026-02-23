@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main-wrapper {
+        position: relative;
+        width: 100%;
+        height: 130vh; /* Full viewport height */
+    }
+
+    /* Background layer with blur */
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(236, 179, 103);
+        filter: blur(5px); /* Apply blur effect */
+        z-index: -1; /* Keep it behind content */
+    }
+
+    /* Content layer */
+    .content {
+        position: relative;
+        z-index: 1; /* Ensure this is above the background */
+    }
+
+    .boxes{
+        width: 100%;
+        height: 30vh;
+        /* background-color: blueviolet; */
+        margin-bottom: 15px;
+        /* z-index: -1; */
+    }
+    .box1{
+        width: 180px;
+        height: 100%;
+        background-image: linear-gradient(to top left,rgb(241, 117, 136),rgb(211, 48, 176),rgb(118, 8, 118));
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        z-index: -1;
+    }
+    .box2{
+        width: 180px;
+        height: 100%;
+        background-image: linear-gradient(to top left,rgb(128, 93, 233),rgb(131, 69, 189),rgb(62, 5, 109));
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+    }
+    .box3{
+        width: 180px;
+        height: 100%;
+        background-image: linear-gradient(to top,rgb(235, 105, 127),rgb(240, 240, 128),orange);
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+    }
+    .box4{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top right,rgb(244, 91, 193),rgb(64, 16, 142),rgb(72, 7, 113));
+    }
+    .box5{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(187, 78, 187),rgb(140, 8, 152),rgb(108, 8, 108));
+    }
+    .box6{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to bottom right,rgb(108, 227, 227),rgb(27, 150, 187),rgb(10, 161, 149));
+    }
+    .box7{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(160, 167, 230),rgb(169, 106, 221),rgb(152, 19, 152));
+    }
+    .box8{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(112, 14, 112),rgb(121, 12, 154),rgb(88, 21, 156));
+    }
+    .box9{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(187, 78, 187),rgb(159, 48, 169),rgb(66, 8, 108));
+    }
+    .box10{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(141, 239, 220),rgb(59, 219, 171),rgb(6, 99, 96));
+    }
+    .box11{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(244, 141, 210),rgb(140, 8, 152),rgb(108, 8, 108));
+    }
+    .box12{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(252, 108, 189),rgb(244, 96, 140),rgb(241, 219, 81));
+    }
+    .box13{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(245, 219, 50),rgb(246, 133, 68),rgb(246, 64, 155),rgb(90, 57, 239));
+    }
+    .box14{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(42, 171, 188),rgb(142, 169, 226),rgb(102, 62, 161));
+
+    }
+    .box15{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(103, 243, 191),rgb(39, 215, 121),rgb(65, 174, 160));
+
+    }
+    .box16{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(91, 220, 142),rgb(44, 218, 140),rgb(10, 30, 129));
+
+    }
+    .box17{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to bottom left,rgb(242, 155, 214),rgb(189, 73, 209),rgb(98, 54, 159));
+
+    }
+    .box18{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top left,rgb(218, 87, 131),rgb(216, 126, 213),rgb(235, 238, 142));
+
+    }
+    .box19{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to top right,rgb(234, 226, 112),rgb(199, 199, 29),rgb(232, 242, 146));
+
+    }
+    .box20{
+        width: 180px;
+        height: 100%;
+        float: left;
+        margin-right: 60px;
+        border-radius: 12px;
+        background-image: linear-gradient(to bottom ,rgb(75, 223, 61),rgb(235, 235, 61),rgb(245, 143, 60));
+
+    }
+    .text{
+        background-color: white;
+        width: 86.5%;
+        height: 28%;
+        position: relative ;
+        top: 60%;
+        left: 0px;
+        /* border-radius: 12px; */
+        padding: 12px;
+        border-bottom-left-radius:12px ;
+        border-bottom-right-radius: 12px ;
+        
+    }
+</style>
+<body>
+    <div class="main-wrapper">
+        <div class="background"></div>
+        <div class="content">
+        <div class="boxes" style="margin-top: 15px;">
+            <div class="box1" style="margin-left: 100px;">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box2">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box3">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box4">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box5">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="box6" style="margin-left: 100px;">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box7">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box8">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box9">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box10">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="box11" style="margin-left: 100px;">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box12">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box13">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box14">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box15">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="box16" style="margin-left: 100px;">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box17">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box18">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box19">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+            <div class="box20">
+                <div class="text">
+                    <span style="color: blueviolet;">74276C</span> <br>C53364 <br>FD8263
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
