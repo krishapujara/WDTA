@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Master Demo</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:20px;
+background:#f4f4f4;
+}
+
+h1{
+text-align:center;
+}
+
+h2{
+margin-top:50px;
+color:#333;
+}
+
+h3{
+margin:10px 0;
+color:#555;
+}
+
+.container{
+display:flex;
+border:3px solid black;
+padding:10px;
+margin-bottom:25px;
+background:white;
+min-height:120px;
+}
+
+.box{
+background:#4CAF50;
+color:white;
+padding:20px;
+margin:5px;
+font-weight:bold;
+text-align:center;
+}
+
+/* FLEX DIRECTION */
+
+.row{flex-direction:row;}
+.row-reverse{flex-direction:row-reverse;}
+.column{flex-direction:column;height:250px;}
+.column-reverse{flex-direction:column-reverse;height:250px;}
+
+/* JUSTIFY CONTENT */
+
+.j-start{justify-content:flex-start;}
+.j-end{justify-content:flex-end;}
+.j-center{justify-content:center;}
+.j-between{justify-content:space-between;}
+.j-around{justify-content:space-around;}
+.j-evenly{justify-content:space-evenly;}
+
+/* ALIGN ITEMS */
+
+.a-start{align-items:flex-start;height:150px;}
+.a-center{align-items:center;height:150px;}
+.a-end{align-items:flex-end;height:150px;}
+.a-stretch{align-items:stretch;height:150px;}
+.a-baseline{align-items:baseline;height:150px;}
+
+/* FLEX WRAP */
+
+.nowrap{flex-wrap:nowrap;width:300px;}
+.wrap{flex-wrap:wrap;width:300px;}
+.wrap-reverse{flex-wrap:wrap-reverse;width:300px;}
+
+/* ALIGN CONTENT */
+
+.ac-start{flex-wrap:wrap;align-content:flex-start;height:200px;width:300px;}
+.ac-center{flex-wrap:wrap;align-content:center;height:200px;width:300px;}
+.ac-end{flex-wrap:wrap;align-content:flex-end;height:200px;width:300px;}
+.ac-between{flex-wrap:wrap;align-content:space-between;height:200px;width:300px;}
+.ac-around{flex-wrap:wrap;align-content:space-around;height:200px;width:300px;}
+.ac-evenly{flex-wrap:wrap;align-content:space-evenly;height:200px;width:300px;}
+
+/* GAP */
+
+.gap-demo{
+gap:25px;
+}
+
+/* FLEX GROW */
+
+.grow1{flex-grow:1;}
+.grow2{flex-grow:2;}
+
+/* FLEX SHRINK */
+
+.shrink0{flex-shrink:0;width:200px;}
+.shrink1{flex-shrink:1;width:200px;}
+
+/* FLEX BASIS */
+
+.basis{flex-basis:200px;}
+
+/* ORDER */
+
+.order1{order:1;}
+.order2{order:2;}
+.order3{order:3;}
+
+/* ALIGN SELF */
+
+.self-start{align-self:flex-start;}
+.self-center{align-self:center;}
+.self-end{align-self:flex-end;}
+
+</style>
+</head>
+
+<body>
+
+<h1>Flexbox Master Demo</h1>
+
+<!-- FLEX DIRECTION -->
+
+<h2>Property: flex-direction</h2>
+
+<h3>Value: row</h3>
+<div class="container row">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: row-reverse</h3>
+<div class="container row-reverse">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: column</h3>
+<div class="container column">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: column-reverse</h3>
+<div class="container column-reverse">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- JUSTIFY CONTENT -->
+
+<h2>Property: justify-content</h2>
+
+<h3>Value: flex-start</h3>
+<div class="container j-start">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: flex-end</h3>
+<div class="container j-end">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: center</h3>
+<div class="container j-center">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: space-between</h3>
+<div class="container j-between">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: space-around</h3>
+<div class="container j-around">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: space-evenly</h3>
+<div class="container j-evenly">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- ALIGN ITEMS -->
+
+<h2>Property: align-items</h2>
+
+<h3>Value: flex-start</h3>
+<div class="container a-start">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: center</h3>
+<div class="container a-center">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: flex-end</h3>
+<div class="container a-end">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+<h3>Value: stretch</h3>
+<div class="container a-stretch">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- FLEX WRAP -->
+
+<h2>Property: flex-wrap</h2>
+
+<h3>Value: nowrap</h3>
+<div class="container nowrap">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+</div>
+
+<h3>Value: wrap</h3>
+<div class="container wrap">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+</div>
+
+<h3>Value: wrap-reverse</h3>
+<div class="container wrap-reverse">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+</div>
+
+
+<!-- GAP -->
+
+<h2>Property: gap</h2>
+
+<h3>Value: gap:25px</h3>
+<div class="container gap-demo">
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- FLEX GROW -->
+
+<h2>Property: flex-grow</h2>
+
+<h3>Box2 grows twice as much</h3>
+<div class="container">
+<div class="box grow1">1</div>
+<div class="box grow2">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- FLEX SHRINK -->
+
+<h2>Property: flex-shrink</h2>
+
+<h3>Box1 does not shrink</h3>
+<div class="container">
+<div class="box shrink0">1</div>
+<div class="box shrink1">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- FLEX BASIS -->
+
+<h2>Property: flex-basis</h2>
+
+<h3>Value: 200px</h3>
+<div class="container">
+<div class="box basis">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+</div>
+
+
+<!-- ORDER -->
+
+<h2>Property: order</h2>
+
+<h3>Custom order applied</h3>
+<div class="container">
+<div class="box order3">1</div>
+<div class="box order1">2</div>
+<div class="box order2">3</div>
+</div>
+
+
+<!-- ALIGN SELF -->
+
+<h2>Property: align-self</h2>
+
+<h3>Each item aligned differently</h3>
+<div class="container" style="height:150px;">
+<div class="box self-start">1</div>
+<div class="box self-center">2</div>
+<div class="box self-end">3</div>
+</div>
+
+</body>
+</html>
