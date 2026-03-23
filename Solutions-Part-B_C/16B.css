@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #333;
+    color: white;
+}
+
+.navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+.download-btn {
+    background-color: #7ab8f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3t-KAVstBWiA-v3JFbaiJ8nXV15Lmz7olAQ&s'); /*yaad karjo linear and radial gradient karavyu tyare jeel sir ae sikhdavyu htu ke aek sathe 2 background kem rakhva*/
+    background-size: cover;
+    background-position: center;
+    height: 170px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /*all event vacho vach lakhva mate*/
+    padding-right: 100px;
+    margin: 20px 50px;
+    /*aama jani joine background-repead:no-repeat nathi karyu kem ke maro image repetation ma j saro lage che*/
+}
+
+.hero-banner h1 {
+    font-size: 4rem;
+    font-style: italic;
+    opacity: 0.8; /*opacity thi text ni pachadnu background pn aachu (light-light) dekhai if wish tame loko ommit kari sako*/
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Allows cards to move to the next line */
+    gap: 20px;            /* The space between cards */
+    padding: 50px;        /* Consistent spacing around the grid */
+    justify-content: center; /* Centers the cards if they don't fill a row */
+}
+
+.card {
+    background-color: white;
+    color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+    
+    /* The Logic: (100% / 4 cards) - gap adjustment ane calc property toh karavi j che sir ae audi ma*/
+    flex: 0 0 calc(25% - 15px); 
+    
+    /* Fallback for older browsers */
+    width: calc(25% - 15px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.card-body h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+.tags {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    height: 40px; 
+}
+
+.see-more {
+    background-color: #7ab8f5;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.see-more:hover {
+    background-color: #5a9bd5;
+}
