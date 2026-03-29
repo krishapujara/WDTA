@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20B</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-white bg-white border-bottom shadow-sm sticky-top">
+        <div class="container-fluid">
+            <button class="btn border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="fa-solid fa-bars fs-4"></i>
+            </button>
+            
+            <div class="ms-auto d-flex align-items-center">
+                <div class="rounded-circle bg-light border d-flex align-items-center justify-content-center me-2" style="width: 32px; height: 32px;">
+                    <i class="fa-solid fa-user text-secondary" style="font-size: 14px;"></i>
+                </div>
+                <span class="small fw-semibold d-none d-sm-inline">Administrator</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebarMenu" style="width: 260px; background-color: #2c3b41 !important;">
+        <div class="offcanvas-header border-bottom border-secondary text-center">
+            <h5 class="offcanvas-title fw-bold mx-auto text-white">Open Admin</h5>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="px-3 py-3">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control bg-dark border-0 text-white shadow-none" placeholder="Search..." style="background-color: #374850 !important;">
+                    <span class="input-group-text bg-dark border-0 text-white-50" style="background-color: #374850 !important;"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+
+            <ul class="nav flex-column gap-0 small">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white-50 px-3 py-2"><i class="fa-solid fa-gauge-high me-3"></i> Dashboard</a>
+                </li>
+                <li class="nav-item" style="background-color: #1e282c; border-left: 3px solid #3c8dbc;">
+                    <a href="#" class="nav-link text-white fw-bold px-3 py-2"><i class="fa-solid fa-file-lines me-3"></i> Pages</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white-50 d-flex justify-content-between px-3 py-2">
+                        <span><i class="fa-solid fa-user-shield me-3"></i> Admin</span>
+                        <i class="fa-solid fa-chevron-right small pt-1"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white-50 d-flex justify-content-between px-3 py-2">
+                        <span><i class="fa-solid fa-wand-magic-sparkles me-3"></i> Helpers</span>
+                        <i class="fa-solid fa-chevron-right small pt-1"></i>
+                    </a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link text-white-50 px-3 py-2"><i class="fa-solid fa-photo-film me-3"></i> Media manager</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white-50 px-3 py-2"><i class="fa-solid fa-gear me-3"></i> Config</a></li>
+                <li class="nav-item border-top border-secondary mt-2 pt-2"><a href="#" class="nav-link text-white-50 px-3 py-2"><i class="fa-solid fa-code me-3"></i> Api tester</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white-50 px-3 py-2"><i class="fa-solid fa-palette me-3"></i> Page Designer</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="container-fluid p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-normal mb-0">Page <small class="text-muted fs-6">List</small></h3>
+            <div class="small">
+                <i class="fa-solid fa-house text-primary me-1"></i> <span class="text-muted">Home / Pages</span>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm rounded-0">
+            <div class="card-header bg-white py-3 border-bottom-0">
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-success btn-sm px-3 rounded-1"><i class="fa-solid fa-plus me-1"></i> New</button>
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm px-3">2 items selected</button>
+                        <button class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm px-3"><i class="fa-solid fa-filter me-1"></i> Filter</button>
+                        <button class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                    </div>
+
+                    <button class="btn btn-danger btn-sm px-3 rounded-1"><i class="fa-solid fa-circle-exclamation me-1"></i> Report</button>
+                    
+                    <div class="ms-auto d-flex gap-2">
+                        <div class="btn-group">
+                        <button class="btn btn-primary btn-sm rounded-1"><i class="fa-solid fa-download me-1"></i>Export</button>
+                            <button class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm"><i class="fa-solid fa-table-cells"></i></button>
+                            <button class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 small border-top">
+                    <thead class="bg-light text-secondary">
+                        <tr style="background-color: #f9fafc;">
+                            <th width="40" class="ps-3"><input type="checkbox" class="form-check-input"></th>
+                            <th>ID <i class="fa-solid fa-sort small ms-1 text-muted"></i></th>
+                            <th>title</th>
+                            <th>Date <i class="fa-solid fa-filter text-primary ms-1"></i></th>
+                            <th>Tags</th>
+                            <th>Star</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                            <td>1</td>
+                            <td>Homepage</td>
+                            <td>-</td>
+                            <td><i class="fa-solid fa-square-check" style="color: hsl(56, 16%, 61%);"></i><span class="badge bg-dark">new</span> <span class="badge bg-success">special</span></td>
+                            <td><i class="fa-regular fa-star text-primary"></i></td>
+                            <td>2022-02-17 00:51:01</td>
+                            <td>2022-06-25 14:30:21</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-pencil mx-1"></i><i class="fa-solid fa-eye mx-1"></i><i class="fa-solid fa-trash mx-1"></i></td>
+                        </tr>
+                        <tr class="table-warning bg-opacity-10">
+                            <td class="ps-3"><input type="checkbox" class="form-check-input" checked></td>
+                            <td class="fw-bold">2</td>
+                            <td class="fw-bold">Blog</td>
+                            <td class="text-decoration-underline">2022-06-25</td>
+                            <td><i class="fa-solid fa-square-check" style="color: hsl(56, 16%, 61%);"></i><span class="badge bg-dark">new</span></td>
+                            <td><i class="fa-regular fa-star text-primary"></i></td>
+                            <td>2022-06-25 14:30:33</td>
+                            <td>2022-06-25 14:30:33</td>
+                            <td class="text-center"><i class="fa-solid fa-pencil text-muted mx-1"></i><i class="fa-solid fa-eye text-muted mx-1"></i><i class="fa-solid fa-trash text-muted mx-1"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                            <td>3</td>
+                            <td>About us</td>
+                            <td class="text-decoration-underline">2022-06-25</td>
+                            <td><i class="fa-solid fa-square-check" style="color: hsl(56, 16%, 61%);"></i>-</td>
+                            <td><i class="fa-solid fa-star text-primary"></i></td>
+                            <td>2022-06-25 14:36:58</td>
+                            <td>2022-06-25 14:37:40</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-pencil mx-1"></i><i class="fa-solid fa-eye mx-1"></i><i class="fa-solid fa-trash mx-1"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                            <td>4</td>
+                            <td>Contact</td>
+                            <td class="text-decoration-underline">2022-06-25</td>
+                            <td><i class="fa-solid fa-square-check" style="color: hsl(56, 16%, 61%);"></i><span class="badge bg-success">code</span> <span class="badge bg-success">special</span></td>
+                            <td><i class="fa-regular fa-star text-primary"></i></td>
+                            <td>2022-06-25 14:37:12</td>
+                            <td>2022-06-25 14:39:16</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-pencil mx-1"></i><i class="fa-solid fa-eye mx-1"></i><i class="fa-solid fa-trash mx-1"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                            <td>5</td>
+                            <td>Cases</td>
+                            <td>-</td>
+                            <td><i class="fa-solid fa-square-check" style="color: hsl(56, 16%, 61%);"></i>-</td>
+                            <td><i class="fa-regular fa-star text-primary"></i></td>
+                            <td>2022-06-25 14:37:22</td>
+                            <td>2022-06-25 14:37:36</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-pencil mx-1"></i><i class="fa-solid fa-eye mx-1"></i><i class="fa-solid fa-trash mx-1"></i></td>
+                        </tr>
+                        <tr class="table-warning bg-opacity-10">
+                            <td class="ps-3"><input type="checkbox" class="form-check-input" checked></td>
+                            <td class="fw-bold">6</td>
+                            <td class="fw-bold">Clients</td>
+                            <td class="text-decoration-underline">2022-06-25</td>
+                            <td><i class="fa-solid fa-square-check" style="color: hsl(56, 16%, 61%);"></i><span class="badge bg-success">special</span></td>
+                            <td><i class="fa-regular fa-star text-primary"></i></td>
+                            <td>2022-06-25 14:37:28</td>
+                            <td>2022-06-25 14:37:28</td>
+                            <td class="text-center"><i class="fa-solid fa-pencil text-muted mx-1"></i><i class="fa-solid fa-eye text-muted mx-1"></i><i class="fa-solid fa-trash text-muted mx-1"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-footer bg-white py-3 border-0 d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Showing <b>1</b> to <b>6</b> of 6 entries</span>
+                
+                <div class="d-flex align-items-center gap-2 small">
+                    <span class="text-muted">Show</span>
+                    <select class="form-select form-select-sm" style="width: 70px;">
+                        <option>20</option>
+                    </select>
+                    <span class="text-muted">entries</span>
+                    
+                    <nav class="ms-3">
+                        <ul class="pagination pagination-sm mb-0">
+                            <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="#">»</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!-- filter nu icon last ma add karvanu che ae kari dejo khali aek extra td add karine aema font awesome mathi filter no emoji copy-paste -->
